@@ -1,5 +1,5 @@
 $date
-	Fri Oct 23 19:11:11 2020
+	Fri Oct 23 19:14:00 2020
 $end
 $version
 	Icarus Verilog
@@ -14,22 +14,22 @@ $var wire 12 # COUNTER [11:0] $end
 $var reg 4 $ A [3:0] $end
 $var reg 4 % B [3:0] $end
 $var reg 1 & CLK $end
-$var reg 12 ' D [11:0] $end
+$var reg 11 ' D [10:0] $end
 $var reg 1 ( EC $end
 $var reg 1 ) LOAD $end
 $var reg 1 * RESET $end
-$var reg 12 + add [11:0] $end
+$var reg 11 + add [10:0] $end
 $var reg 3 , sel [2:0] $end
 $scope module U1 $end
 $var wire 1 ( CLK $end
-$var wire 12 - D [11:0] $end
+$var wire 11 - D [10:0] $end
 $var wire 1 ) ENABLE $end
 $var wire 1 * LOAD $end
 $var wire 1 & RESET $end
-$var reg 12 . out [11:0] $end
+$var reg 11 . out [10:0] $end
 $upscope $end
 $scope module U2 $end
-$var wire 12 / AD [11:0] $end
+$var wire 11 / AD [10:0] $end
 $var wire 8 0 D [7:0] $end
 $upscope $end
 $scope module U3 $end
@@ -63,7 +63,7 @@ bx '
 0&
 bx %
 bx $
-bx #
+b0xxxxxxxxxxx #
 bx "
 bx !
 $end
