@@ -1,6 +1,6 @@
 //PABLO MUÑOZ
 module Lab_8();
-  reg [11:0]D; reg[11:0]add; reg [3:0]A; reg [3:0]B; reg [2:0]sel;
+  reg [10:0]D; reg[10:0]add; reg [3:0]A; reg [3:0]B; reg [2:0]sel;
   reg LOAD, EC, RESET, CLK;
   wire [11:0]COUNTER; wire [7:0]Memoria; wire [3:0]alu;
 	CounterLoad U1(D, LOAD, EC, CLK, RESET, COUNTER);
@@ -16,7 +16,6 @@ end
 	#3
 	$display("Ej_1");
     $display("CLK D LOAD ENABLE |  COUNTER");
-    $display("--------------------------------");
     $monitor("%b  %d    %b     %b   |%d", CLK, D, LOAD, EC, COUNTER);
        RESET = 1; D = 20; LOAD = 0; EC = 0;
 	   #1 RESET = 0;
@@ -34,7 +33,6 @@ end
 	#60
 	$display("Ej_2");
     $display("ADD  | Memoria");
-    $display("--------------");
     $monitor("%d   |%d", add, Memoria);
 	  #1 add = 00;
 	  #2 add = 55;
@@ -52,8 +50,7 @@ end
    initial begin
 	#80
 	$display("Ej_3");
-    $display(" A     B   Sel  | Y");
-    $display("---------------------");
+    $display(" A     B   Sel  | OUT");
     $monitor("%b %b %b  |%b", A, B, sel, alu);
 	sel = 0; A = 0; B = 0;
 	#1 B = 1;
